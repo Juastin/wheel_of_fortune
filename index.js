@@ -1,5 +1,6 @@
 const { Client, GatewayIntentBits } = require('discord.js');
 const client = new Client({ intents: [GatewayIntentBits.Guilds] });
+const token= require('./token.json');
 
 
 client.on('ready', () => {
@@ -14,4 +15,4 @@ client.on('interactionCreate', async interaction => {
   }
 });
 
-client.login('MTAyNTM3ODA4Nzc5NTQyOTM3Ng.GMs7bp.9qENW7h1OSwHjACu_jyUcgTVFCmIt0o6P1howc');
+client.login(token.token);
